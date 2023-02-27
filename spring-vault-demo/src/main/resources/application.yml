@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?allowPublicKeyRetrieval=true&useSSL=false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

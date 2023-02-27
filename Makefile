@@ -28,12 +28,12 @@ logs:
 ui:
 	open http://localhost:7071
 
-build-api:
-	cd demo-api \
+build-app:
+	cd spring-vault-demo \
 	&& ./mvnw clean package
 
-run-api:
-	cd demo-api \
+run-app:
+	cd spring-vault-demo \
 	&& ./mvnw spring-boot:run
 
 build-docker-api:

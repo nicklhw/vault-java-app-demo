@@ -38,8 +38,7 @@ role_id
 secret_id
 token
 .idea
-/demo-api/target
-/demo-ui/target
+/spring-vault-demo/target
 
 /docker-compose/scripts/vault.json
 /docker-compose/vault/audit_logs

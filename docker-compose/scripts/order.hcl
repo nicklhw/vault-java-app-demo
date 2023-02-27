@@ -1,7 +1,7 @@
-path "secret/spring-vault-demo*" {
+path "secret/data/spring-vault-demo*" {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
-path "secret/application*" {
+path "secret/data/application*" {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
 path "transit/decrypt/order" {
@@ -13,6 +13,6 @@ path "transit/encrypt/order" {
 path "database/creds/order" {
   capabilities = ["read"]
 }
-path "sys/renew/*" {
+path "sys/leases/*" {
   capabilities = ["update"]
 }

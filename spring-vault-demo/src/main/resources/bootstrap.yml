@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-vault-demo
+  cloud.vault:
+      authentication: NONE
+      host: localhost
+      port: 8100
+      scheme: http
+      kv:
+        enabled: true
+        backend: secret
+        default-context: application
+        application-name: spring-vault-demo
+      database:
+        enabled: true
+        role: order
+        backend: database
+        username-property: spring.datasource.username
+        password-property: spring.datasource.password

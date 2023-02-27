@@ -40,6 +40,7 @@ vault audit enable file file_path=/var/log/vault/vault-audit.log mode=744
 tput setaf 12 && echo "############## Enable KV v2 secret engine ##############"
 
 vault secrets enable -version=2 -path=secret kv
+vault kv put -mount=secret spring-vault-demo secret=hello-vault
 
 tput setaf 12 && echo "############## Setup Database secret engine ##############"
 
