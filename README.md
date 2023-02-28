@@ -35,6 +35,7 @@ make build-docker-api
 ```
 
 # Reference
+- [Spring Cloud Vault](https://cloud.spring.io/spring-cloud-vault/reference/html/#_quick_start)
 - [Vault Java Application Demo Tutorial](https://developer.hashicorp.com/vault/tutorials/encryption-as-a-service/eaas-spring-demo)
 - [Refreshing Spring Configuration at runtime](https://cloud.spring.io/spring-cloud-static/Greenwich.RELEASE/multi/multi__spring_cloud_config_2.html#_refreshing_the_configuration_at_runtime)
 - [Rotating Vault Database Secrets in Spring Boot](https://secrets-as-a-service.com/posts/hashicorp-vault/rotate-dynamic-relational-database-connection-in-spring-at-runtime/)
