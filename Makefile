@@ -36,5 +36,5 @@ run-app:
 	cd spring-vault-demo \
 	&& ./mvnw spring-boot:run
 
-build-docker-api:
-	docker build -t nicklhw/transform-demo-api -f demo-api/Dockerfile ./demo-api
+build-docker-app:
+	docker build -t nicklhw/spring-vault-demo -f spring-vault-demo/Dockerfile ./spring-vault-demo
