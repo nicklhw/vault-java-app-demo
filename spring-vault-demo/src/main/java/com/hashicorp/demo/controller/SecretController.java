@@ -13,19 +13,8 @@ public class SecretController {
     @Value("${secret:n/a}")
     String secret;
 
-//    @Value("${spring.datasource.username:n/a}")
-//    String dbusername;
-//
-//    @Value("${spring.datasource.password:n/a}")
-//    String dbpassword;
-
     @RequestMapping("/api/secret")
     public Secret secret() {
         return new Secret("secret", secret);
     }
-
-//    @RequestMapping("/api/dbcreds")
-//    public Secret dbcreds() {
-//        return new Secret("dbcreds", String.format("%s : %s", dbusername, dbpassword));
-//    }
 }

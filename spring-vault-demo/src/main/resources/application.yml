@@ -6,3 +6,10 @@ management:
     web:
       exposure:
         include: refresh
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        vault: DEBUG
+        cloud.vault: DEBUG
