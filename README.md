@@ -21,7 +21,7 @@ vault login --method=userpass username=admin password=passw0rd
 docker exec -it mysql sh
 mysql -uroot -ppassw0rd
 use demo;
-describe users_tokenization;
+describe orders;
 
 # build demo-api spring boot app
 make build-api
@@ -35,3 +35,5 @@ make build-docker-api
 ```
 
 # Reference
+- [Vault Java Application Demo Tutorial](https://developer.hashicorp.com/vault/tutorials/encryption-as-a-service/eaas-spring-demo)
+- [Refreshing Spring Configuration at runtime](https://cloud.spring.io/spring-cloud-static/Greenwich.RELEASE/multi/multi__spring_cloud_config_2.html#_refreshing_the_configuration_at_runtime)
