@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "fc762afe-7840-4ce7-b802-47cd2a4fa3b6",
+		"name": "Vault Java App Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "381353"
+	},
+	"item": [
+		{
+			"name": "New Order - Vault",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"James\",\n    \"productName\": \"Vault-Enterprise\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Order - Terraform",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"John\",\n    \"productName\": \"Terraform-Enterprise\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Order - Consul",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"Nick\",\n    \"productName\": \"Consul-Enterprise\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Secret",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/secret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"secret"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

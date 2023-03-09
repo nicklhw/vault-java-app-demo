@@ -26,7 +26,7 @@ logs:
     && docker-compose logs -f
 
 ui:
-	open http://localhost:7071
+	open http://localhost:8200
 
 build-app:
 	cd spring-vault-demo \
