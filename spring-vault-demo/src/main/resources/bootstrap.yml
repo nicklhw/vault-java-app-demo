@@ -2,9 +2,9 @@ spring:
   application:
     name: spring-vault-demo
   cloud.vault:
-      authentication: NONE
+      authentication: APPROLE
       host: localhost
-      port: 8100
+      port: 8200
       scheme: http
       kv:
         enabled: true

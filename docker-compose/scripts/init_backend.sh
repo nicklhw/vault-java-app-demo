@@ -44,6 +44,9 @@ vault kv put -mount=secret spring-vault-demo secret=hello-vault
 
 tput setaf 12 && echo "############## Setup Database secret engine ##############"
 
+# Give MySQL time to initialize after container starts up
+sleep 10
+
 vault secrets enable database
 
 vault write database/config/mysql-demo-db \
