@@ -14,6 +14,11 @@ This repo demonstrates the integration between Vault and a sample Java applicati
     - The database secrets engine integrates with MySQL to generate dynamic DB credentials for the demo-app
     - The transit secrets engine is used for encrypting and decrypting application data
 - [Sample Postman collection](spring-vault-demo/demo.postman_collection.json) included
+
+# Prerequisites
+- [Docker Desktop with Docker Compose v2 enabled](https://www.docker.com/products/docker-desktop/)
+
+![](assets/docker-settings.png)
   
 # Run
 
