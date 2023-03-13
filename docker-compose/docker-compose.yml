@@ -41,35 +41,20 @@ services:
       - MYSQL_ROOT_PASSWORD=passw0rd
     networks:
       - vault-demo
-  vault-agent:
-    profiles: ["frontend"]
-    image: hashicorp/vault-enterprise:latest
-    restart: always
-    depends_on: [ vault ]
-    volumes:
-      - ./vault-agent/:/vault/config
-    ports:
-      - "8100:8100/tcp"
-    cap_add:
-      - IPC_LOCK
-    container_name: vault-agent
-    entrypoint: "vault agent -config=/vault/config/agent.hcl"
-    environment:
-      - VAULT_LICENSE=${VAULT_LICENSE}
-    networks:
-      - vault-demo
   spring-vault-demo:
     profiles: ["frontend"]
     image: nicklhw/spring-vault-demo
     container_name: spring-vault-demo
     restart: always
-    depends_on: [vault-agent]
+    depends_on: [vault]
     build:
       context: ../spring-vault-demo
     ports:
       - "8080:8080"
     environment:
-      - SPRING_CLOUD_VAULT_HOST=vault-agent
+      - SPRING_CLOUD_VAULT_HOST=vault
+      - SPRING_CLOUD_VAULT_APP_ROLE_ROLE_ID=${APPROLE_ROLE_ID}
+      - SPRING_CLOUD_VAULT_APP_ROLE_SECRET_ID=${APPROLE_SECRET_ID}
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/demo?allowPublicKeyRetrieval=true&useSSL=false
     entrypoint: "java -jar /app/spring-vault-demo-0.0.1-SNAPSHOT.jar"
     networks:
